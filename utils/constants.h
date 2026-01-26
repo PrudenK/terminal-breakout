@@ -5,8 +5,12 @@
 #ifndef TERMINAL_BREAKOUT_CONSTANTS_H
 #define TERMINAL_BREAKOUT_CONSTANTS_H
 
-constexpr int WIDTH = 20;
-constexpr int HEIGHT = 40;
+constexpr int WIDTH = 15;
+constexpr int HEIGHT = 22;
 
+constexpr int EMPTY = 0;
+constexpr int PLAYER = 1;
+constexpr int BULLET = 11;
+constexpr int BORDER = 9;
 
 #endif //TERMINAL_BREAKOUT_CONSTANTS_H

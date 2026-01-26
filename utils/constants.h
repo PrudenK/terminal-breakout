@@ -13,4 +13,15 @@ constexpr int PLAYER = 1;
 constexpr int BULLET = 11;
 constexpr int BORDER = 9;
 
+constexpr int INITIAL_PLAYER_POS = WIDTH / 2;
+
+
+
+constexpr int DIR_LEFT = -1;
+constexpr int DIR_RIGHT = 1;
+
+
+constexpr int LIMIT_LEFT = 2;
+constexpr int LIMIT_RIGHT = HEIGHT - 2;
+
 #endif //TERMINAL_BREAKOUT_CONSTANTS_H

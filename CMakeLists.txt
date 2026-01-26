@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(terminal_breakout main.cpp
         utils/constants.h
         board/Board.cpp
-        board/Board.h)
+        board/Board.h
+        player/Player.cpp
+        player/Player.h)

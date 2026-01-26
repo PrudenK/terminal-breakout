@@ -3,4 +3,5 @@ project(terminal_breakout)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(terminal_breakout main.cpp)
+add_executable(terminal_breakout main.cpp
+        utils/constants.h)

@@ -15,6 +15,8 @@ public:
     Player(int pos, Board& board);
 
     void move(int dir);
+
+    void update_pos();
 };
 
 

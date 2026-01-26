@@ -22,6 +22,6 @@ constexpr int DIR_RIGHT = 1;
 
 
 constexpr int LIMIT_LEFT = 2;
-constexpr int LIMIT_RIGHT = HEIGHT - 2;
+constexpr int LIMIT_RIGHT = WIDTH - 3;
 
 #endif //TERMINAL_BREAKOUT_CONSTANTS_H

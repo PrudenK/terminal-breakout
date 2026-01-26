@@ -13,6 +13,13 @@ Board::Board(int width, int height): width(width), height(height), board(height,
 
 }
 
+void Board::set_cell(int x, int y, int value) {
+    board[x][y] = value;
+}
+
+int Board::getCell(int x, int y) {
+    return board[x][y];
+}
 
 void Board::init() {
     for (int i = 0; i < HEIGHT; ++i) {

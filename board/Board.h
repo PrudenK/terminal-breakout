@@ -13,8 +13,14 @@ class Board {
     std::vector<std::vector<int>> board;
 
 public: Board(int width, int height);
-        void init();
-        void print();
+
+    void set_cell(int x, int y, int value);
+
+    int getCell(int x, int y);
+
+    void init();
+
+    void print();
 
 private:
     void print_cell(int value) const;

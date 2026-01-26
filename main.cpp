@@ -1,4 +1,3 @@
-#include <iostream>
 #include <unistd.h>
 
 #include "board/Board.h"
@@ -7,21 +6,19 @@
 #include "utils/constants.h"
 
 int main() {
-    srand(time(NULL));
-
     set_terminal_without_buffer();
-
 
     Board board(WIDTH, HEIGHT);
     board.init();
     Player player(INITIAL_PLAYER_POS, board);
-    board.print();
 
     while (true) {
-        manage_keyboard_inputs(player);
+        int dir = read_last_direction();
+        if (dir != 0) {
+            player.move(dir);
+        }
 
-        usleep(100000);
+        board.print();
+        usleep(60000);
     }
-
-    return 0;
 }

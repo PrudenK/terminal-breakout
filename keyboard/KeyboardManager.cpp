@@ -28,33 +28,35 @@ void restore_terminal() {
     tcsetattr(STDIN_FILENO, TCSANOW, &t);
 }
 
-void manage_keyboard_inputs(Player& player) {
+int read_last_direction() {
     fd_set read_fds;
-    FD_ZERO(&read_fds);
-    FD_SET(STDIN_FILENO, &read_fds);
-
     timeval timeout{};
-    timeout.tv_sec = 0;
-    timeout.tv_usec = 1000;
+    int last_dir = 0;
 
-    if (select(STDIN_FILENO + 1, &read_fds, nullptr, nullptr, &timeout) > 0) {
+    while (true) {
+        FD_ZERO(&read_fds);
+        FD_SET(STDIN_FILENO, &read_fds);
+
+        timeout.tv_sec = 0;
+        timeout.tv_usec = 0;
+
+        if (select(STDIN_FILENO + 1, &read_fds, nullptr, nullptr, &timeout) <= 0) {
+            break;
+        }
+
         char c = getchar();
 
         if (c == '\033') {
             getchar();
             c = getchar();
 
-            if (c == 'C') {
-                player.move(DIR_RIGHT);
-            } else if (c == 'D') {
-                player.move(DIR_LEFT);
-            }
-        }
-
-        if (c == 'q') {
-            printf("Saliendo...\n");
+            if (c == 'C') last_dir = DIR_RIGHT;
+            else if (c == 'D') last_dir = DIR_LEFT;
+        } else if (c == 'q') {
             restore_terminal();
             exit(0);
         }
     }
+
+    return last_dir;
 }

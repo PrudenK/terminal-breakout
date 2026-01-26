@@ -1,0 +1,3 @@
+/home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles/terminal_breakout.dir
+/home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles/edit_cache.dir
+/home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles/rebuild_cache.dir

@@ -19,4 +19,6 @@ void Player::move(int dir) {
             this->pos += DIR_LEFT;
         }
     }
+
+    board.print();
 }

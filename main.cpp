@@ -1,18 +1,27 @@
 #include <iostream>
+#include <unistd.h>
 
 #include "board/Board.h"
+#include "keyboard/KeyboardManager.h"
 #include "player/Player.h"
 #include "utils/constants.h"
 
 int main() {
+    srand(time(NULL));
+
+    set_terminal_without_buffer();
+
 
     Board board(WIDTH, HEIGHT);
     board.init();
+    Player player(INITIAL_PLAYER_POS, board);
     board.print();
 
-    Player player(INITIAL_PLAYER_POS, board);
+    while (true) {
+        manage_keyboard_inputs(player);
 
-    player.move(-1);
+        usleep(100000);
+    }
 
     return 0;
 }

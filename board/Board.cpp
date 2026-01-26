@@ -33,6 +33,8 @@ void Board::init() {
 }
 
 void Board::print() {
+    printf("\033[H\033[J\n\n");
+
     for (int i = 0; i < HEIGHT; ++i) {
         for (int j = 0; j < WIDTH; ++j) {
             print_cell(board[i][j]);

@@ -11,7 +11,8 @@ constexpr int HEIGHT = 22;
 constexpr int EMPTY = 0;
 constexpr int PLAYER = 1;
 constexpr int BULLET = 11;
-constexpr int BORDER = 9;
+constexpr int BALL = 8;
+constexpr int OFFSET_BALL_X_START = 10;
 
 constexpr int INITIAL_PLAYER_POS = WIDTH / 2;
 
@@ -30,6 +31,10 @@ constexpr int ORANGE_BLOCK = 5;
 constexpr int YELLOW_BLOCK = 4;
 constexpr int BLUE_BLOCK = 3;
 constexpr int GREEN_BLOCK = 2;
+
+// BORDERS
+constexpr int BORDER = 9;
+
 
 
 #endif //TERMINAL_BREAKOUT_CONSTANTS_H

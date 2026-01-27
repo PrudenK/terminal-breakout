@@ -81,12 +81,12 @@ clean: CMakeFiles/terminal_breakout.dir/clean
 CMakeFiles/terminal_breakout.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/terminal_breakout.dir/build.make CMakeFiles/terminal_breakout.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/terminal_breakout.dir/build.make CMakeFiles/terminal_breakout.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target terminal_breakout"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target terminal_breakout"
 .PHONY : CMakeFiles/terminal_breakout.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/terminal_breakout.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/terminal_breakout.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pruden/CLionProjects/terminal_breakout/build/CMakeFiles 0
 .PHONY : CMakeFiles/terminal_breakout.dir/rule

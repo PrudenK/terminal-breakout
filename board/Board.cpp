@@ -67,6 +67,8 @@ void Board::print_cell(int v) const {
         case YELLOW_BLOCK: printf("\033[103m   \033[0m"); break;
         case GREEN_BLOCK:  printf("\033[42m   \033[0m"); break;
         case BLUE_BLOCK:   printf("\033[44m   \033[0m"); break;
+        case BALL:         printf("\033[1;97m ● \033[0m"); break;
+
         default:           printf("\033[41m???\033[0m"); break;
     }
 }

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.o"
+  "CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.o.d"
   "CMakeFiles/terminal_breakout.dir/board/Board.cpp.o"
   "CMakeFiles/terminal_breakout.dir/board/Board.cpp.o.d"
   "CMakeFiles/terminal_breakout.dir/keyboard/KeyboardManager.cpp.o"

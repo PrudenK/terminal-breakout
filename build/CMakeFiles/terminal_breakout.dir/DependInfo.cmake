@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/pruden/CLionProjects/terminal_breakout/ball/Ball.cpp" "CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.o" "gcc" "CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.o.d"
   "/home/pruden/CLionProjects/terminal_breakout/board/Board.cpp" "CMakeFiles/terminal_breakout.dir/board/Board.cpp.o" "gcc" "CMakeFiles/terminal_breakout.dir/board/Board.cpp.o.d"
   "/home/pruden/CLionProjects/terminal_breakout/keyboard/KeyboardManager.cpp" "CMakeFiles/terminal_breakout.dir/keyboard/KeyboardManager.cpp.o" "gcc" "CMakeFiles/terminal_breakout.dir/keyboard/KeyboardManager.cpp.o.d"
   "/home/pruden/CLionProjects/terminal_breakout/main.cpp" "CMakeFiles/terminal_breakout.dir/main.cpp.o" "gcc" "CMakeFiles/terminal_breakout.dir/main.cpp.o.d"

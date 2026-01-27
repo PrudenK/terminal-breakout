@@ -1,5 +1,6 @@
 #include <unistd.h>
 
+#include "ball/Ball.h"
 #include "board/Board.h"
 #include "keyboard/KeyboardManager.h"
 #include "player/Player.h"
@@ -11,13 +12,15 @@ int main() {
     Board board(WIDTH, HEIGHT);
     board.init();
     Player player(INITIAL_PLAYER_POS, board);
+    Ball ball;
 
     while (true) {
         int dir = read_last_direction();
         if (dir != 0) {
             player.move(dir);
         }
-
+        player.update_last_dir();
+        ball.update(player, board);
         board.print();
         usleep(60000);
     }

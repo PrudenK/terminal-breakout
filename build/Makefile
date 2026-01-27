@@ -129,6 +129,30 @@ terminal_breakout/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/terminal_breakout.dir/build.make CMakeFiles/terminal_breakout.dir/build
 .PHONY : terminal_breakout/fast
 
+ball/Ball.o: ball/Ball.cpp.o
+.PHONY : ball/Ball.o
+
+# target to build an object file
+ball/Ball.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/terminal_breakout.dir/build.make CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.o
+.PHONY : ball/Ball.cpp.o
+
+ball/Ball.i: ball/Ball.cpp.i
+.PHONY : ball/Ball.i
+
+# target to preprocess a source file
+ball/Ball.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/terminal_breakout.dir/build.make CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.i
+.PHONY : ball/Ball.cpp.i
+
+ball/Ball.s: ball/Ball.cpp.s
+.PHONY : ball/Ball.s
+
+# target to generate assembly for a file
+ball/Ball.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/terminal_breakout.dir/build.make CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.s
+.PHONY : ball/Ball.cpp.s
+
 board/Board.o: board/Board.cpp.o
 .PHONY : board/Board.o
 
@@ -234,6 +258,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... terminal_breakout"
+	@echo "... ball/Ball.o"
+	@echo "... ball/Ball.i"
+	@echo "... ball/Ball.s"
 	@echo "... board/Board.o"
 	@echo "... board/Board.i"
 	@echo "... board/Board.s"

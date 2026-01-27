@@ -1,30 +1,19 @@
-CMakeFiles/terminal_breakout.dir/main.cpp.o: \
- /home/pruden/CLionProjects/terminal_breakout/main.cpp \
- /usr/include/stdc-predef.h /usr/include/unistd.h /usr/include/features.h \
- /usr/include/features-time64.h \
- /usr/include/x86_64-linux-gnu/bits/wordsize.h \
- /usr/include/x86_64-linux-gnu/bits/timesize.h \
- /usr/include/x86_64-linux-gnu/sys/cdefs.h \
- /usr/include/x86_64-linux-gnu/bits/long-double.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs.h \
- /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/types.h \
- /usr/include/x86_64-linux-gnu/bits/typesizes.h \
- /usr/include/x86_64-linux-gnu/bits/time64.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /usr/include/linux/close_range.h \
+CMakeFiles/terminal_breakout.dir/ball/Ball.cpp.o: \
+ /home/pruden/CLionProjects/terminal_breakout/ball/Ball.cpp \
+ /usr/include/stdc-predef.h \
  /home/pruden/CLionProjects/terminal_breakout/ball/Ball.h \
  /home/pruden/CLionProjects/terminal_breakout/ball/../player/Player.h \
  /home/pruden/CLionProjects/terminal_breakout/ball/../player/../board/Board.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+ /usr/include/features.h /usr/include/features-time64.h \
+ /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+ /usr/include/x86_64-linux-gnu/bits/timesize.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /usr/include/x86_64-linux-gnu/bits/long-double.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+ /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h \
  /usr/include/c++/13/pstl/pstl_config.h \
  /usr/include/c++/13/bits/stl_algobase.h \
@@ -66,12 +55,10 @@ CMakeFiles/terminal_breakout.dir/main.cpp.o: \
  /usr/include/c++/13/bits/range_access.h \
  /usr/include/c++/13/bits/vector.tcc \
  /usr/include/c++/13/bits/memory_resource.h /usr/include/c++/13/cstddef \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/ranges_util.h \
  /usr/include/c++/13/bits/ranges_base.h \
  /usr/include/c++/13/bits/max_size_type.h /usr/include/c++/13/numbers \
- /home/pruden/CLionProjects/terminal_breakout/board/Board.h \
- /home/pruden/CLionProjects/terminal_breakout/keyboard/KeyboardManager.h \
- /home/pruden/CLionProjects/terminal_breakout/player/Player.h \
- /home/pruden/CLionProjects/terminal_breakout/utils/constants.h
+ /home/pruden/CLionProjects/terminal_breakout/ball/../utils/constants.h

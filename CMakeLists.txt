@@ -10,4 +10,6 @@ add_executable(terminal_breakout main.cpp
         player/Player.cpp
         player/Player.h
         keyboard/KeyboardManager.cpp
-        keyboard/KeyboardManager.h)
+        keyboard/KeyboardManager.h
+        ball/Ball.cpp
+        ball/Ball.h)

@@ -29,7 +29,14 @@ void Board::init() {
             }else if (i == 0 || i == HEIGHT - 1) {
                 board[i][j] = BORDER;
             } else {
-                board[i][j] = EMPTY;
+                switch (i) {
+                    case 1: board[i][j] = RED_BLOCK; break;
+                    case 2: board[i][j] = ORANGE_BLOCK; break;
+                    case 3: board[i][j] = YELLOW_BLOCK; break;
+                    case 4: board[i][j] = BLUE_BLOCK; break;
+                    case 5: board[i][j] = GREEN_BLOCK; break;
+                    default: board[i][j] = EMPTY; break;
+                }
             }
         }
     }
@@ -50,11 +57,16 @@ void Board::print() {
     }
 }
 
-void Board::print_cell(int j) const {
-    switch (j) {
-        case EMPTY: printf("   "); break;
-        case PLAYER: printf("\033[1;97m===\033[0m"); break;
-        case BORDER: printf("\033[100m   \033[0m"); break;
-        default: printf("\033[41m???\033[0m"); break;
+void Board::print_cell(int v) const {
+    switch (v) {
+        case EMPTY:        printf("   "); break;
+        case PLAYER:       printf("\033[1;97m===\033[0m"); break;
+        case BORDER:       printf("\033[100m   \033[0m"); break;
+        case RED_BLOCK:    printf("\033[41m   \033[0m"); break;
+        case ORANGE_BLOCK: printf("\033[43m   \033[0m"); break;
+        case YELLOW_BLOCK: printf("\033[103m   \033[0m"); break;
+        case GREEN_BLOCK:  printf("\033[42m   \033[0m"); break;
+        case BLUE_BLOCK:   printf("\033[44m   \033[0m"); break;
+        default:           printf("\033[41m???\033[0m"); break;
     }
 }

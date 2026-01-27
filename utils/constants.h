@@ -24,4 +24,12 @@ constexpr int DIR_RIGHT = 1;
 constexpr int LIMIT_LEFT = 2;
 constexpr int LIMIT_RIGHT = WIDTH - 3;
 
+// Blocks
+constexpr int RED_BLOCK = 6;
+constexpr int ORANGE_BLOCK = 5;
+constexpr int YELLOW_BLOCK = 4;
+constexpr int BLUE_BLOCK = 3;
+constexpr int GREEN_BLOCK = 2;
+
+
 #endif //TERMINAL_BREAKOUT_CONSTANTS_H

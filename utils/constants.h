@@ -33,7 +33,10 @@ constexpr int BLUE_BLOCK = 3;
 constexpr int GREEN_BLOCK = 2;
 
 // BORDERS
-constexpr int BORDER = 9;
+constexpr int BORDER_TOP = 91;
+constexpr int BORDER_LEFT = 92;
+constexpr int BORDER_RIGHT = 93;
+constexpr int BORDER_BOTTOM = 94;
 
 
 

@@ -5,6 +5,7 @@
 #include "Board.h"
 
 #include <cstdio>
+#include <iostream>
 
 #include "../utils/constants.h"
 
@@ -24,11 +25,15 @@ int Board::getCell(int x, int y) {
 void Board::init() {
     for (int i = 0; i < HEIGHT; ++i) {
         for (int j = 0; j < WIDTH; ++j) {
-            if (j == 0 || j == WIDTH - 1) {
-                board[i][j] = BORDER;
-            }else if (i == 0 || i == HEIGHT - 1) {
-                board[i][j] = BORDER;
-            } else {
+            if (j == 0) {
+                board[i][j] = BORDER_LEFT;
+            }else if (i == 0) {
+                board[i][j] = BORDER_TOP;
+            }else if (i == HEIGHT - 1) {
+                board[i][j] = BORDER_BOTTOM;
+            }else if (j == WIDTH - 1) {
+                board[i][j] = BORDER_RIGHT;
+            }else {
                 switch (i) {
                     case 1: board[i][j] = RED_BLOCK; break;
                     case 2: board[i][j] = ORANGE_BLOCK; break;
@@ -61,7 +66,13 @@ void Board::print_cell(int v) const {
     switch (v) {
         case EMPTY:        printf("   "); break;
         case PLAYER:       printf("\033[1;97m===\033[0m"); break;
-        case BORDER:       printf("\033[100m   \033[0m"); break;
+        case BORDER_TOP:
+        case BORDER_LEFT:
+        case BORDER_BOTTOM:
+        case BORDER_RIGHT:
+            //std::cout << v << " ";
+            printf("\033[100m   \033[0m");
+            break;
         case RED_BLOCK:    printf("\033[41m   \033[0m"); break;
         case ORANGE_BLOCK: printf("\033[43m   \033[0m"); break;
         case YELLOW_BLOCK: printf("\033[103m   \033[0m"); break;

@@ -31,20 +31,27 @@ void Ball::update(Player& player, Board& board) {
     }else {
         if (colisionCell == PLAYER) {
             dx = -1;
-
             dy = player.get_last_dir();
-
-            x += dx;
-            y += dy;
-            board.set_cell(x, y, BALL);
+            update_cell(board);
         }else {
-            dx *= -1;
-            dy *= -1;
-
-            x += dx;
-            y += dy;
-
-            board.set_cell(x, y, BALL);
+            switch (colisionCell) {
+                case BORDER_LEFT:
+                case BORDER_RIGHT:
+                    dy *= -1;
+                    update_cell(board);
+                    break;
+                default:
+                    dx *= -1;
+                    update_cell(board);
+                    break;
+            }
         }
     }
+}
+
+void Ball::update_cell(Board& board) {
+    x += dx;
+    y += dy;
+
+    board.set_cell(x, y, BALL);
 }

@@ -17,9 +17,6 @@ class Ball {
 public:
     Ball();
     void update(Player& player, Board& board);
-
-private:
-    void update_cell(Board &board);
 };
 
 

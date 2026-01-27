@@ -15,43 +15,55 @@ void Ball::update(Player& player, Board& board) {
     if (tick_counter < 2) return;
     tick_counter = 0;
 
-
     board.set_cell(x, y, EMPTY);
-    int tempX = x + dx;
-    int tempY = y + dy;
 
+    int nextX = x + dx;
+    int nextY = y + dy;
 
-    int colisionCell = board.getCell(tempX, tempY);
+    int cellX = board.getCell(nextX, y);
+    int cellY = board.getCell(x, nextY);
 
-    if (colisionCell == EMPTY) {
-        x += dx;
-        y += dy;
+    bool moveX = true;
+    bool moveY = true;
 
-        board.set_cell(x, y, BALL);
-    }else {
-        if (colisionCell == PLAYER) {
+    if (cellX != EMPTY) {
+        moveX = false;
+
+        if (cellX == PLAYER) {
             dx = -1;
             dy = player.get_last_dir();
-            update_cell(board);
-        }else {
-            switch (colisionCell) {
-                case BORDER_LEFT:
-                case BORDER_RIGHT:
-                    dy *= -1;
-                    update_cell(board);
-                    break;
-                default:
-                    dx *= -1;
-                    update_cell(board);
-                    break;
-            }
+        } else if (cellX >= BORDER_TOP && cellX <= BORDER_BOTTOM) {
+            dx *= -1;
+        } else if (cellX > 100) {
+            if (cellX == GREEN_BLOCK) board.set_cell(nextX, y, EMPTY);
+            else board.set_cell(nextX, y, cellX - 1);
+            dx *= -1;
         }
     }
-}
 
-void Ball::update_cell(Board& board) {
-    x += dx;
-    y += dy;
+    if (cellY != EMPTY) {
+        moveY = false;
+
+        if (cellY == PLAYER) {
+            dx = -1;
+            dy = player.get_last_dir();
+        } else if (cellY >= BORDER_TOP && cellY <= BORDER_BOTTOM) {
+            dy *= -1;
+        } else if (cellY > 100) {
+            if (cellY == GREEN_BLOCK) board.set_cell(x, nextY, EMPTY);
+            else board.set_cell(x, nextY, cellY - 1);
+            dy *= -1;
+        }
+    }
+
+    int newX = x;
+    int newY = y;
+
+    if (moveX && board.getCell(x + dx, y) == EMPTY) newX += dx;
+    if (moveY && board.getCell(newX, y + dy) == EMPTY) newY += dy;
+
+    x = newX;
+    y = newY;
 
     board.set_cell(x, y, BALL);
 }

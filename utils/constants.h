@@ -26,11 +26,11 @@ constexpr int LIMIT_LEFT = 2;
 constexpr int LIMIT_RIGHT = WIDTH - 3;
 
 // Blocks
-constexpr int RED_BLOCK = 106;
-constexpr int ORANGE_BLOCK = 105;
-constexpr int YELLOW_BLOCK = 104;
-constexpr int BLUE_BLOCK = 103;
-constexpr int GREEN_BLOCK = 102;
+constexpr int RED_BLOCK = 105;
+constexpr int ORANGE_BLOCK = 104;
+constexpr int YELLOW_BLOCK = 103;
+constexpr int BLUE_BLOCK = 102;
+constexpr int GREEN_BLOCK = 101;
 
 // BORDERS
 constexpr int BORDER_RANGE = 90;

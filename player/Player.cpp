@@ -25,12 +25,12 @@ void Player::move(int dir) {
 
 void Player::update_pos() {
     for (int i = 1; i < WIDTH -1; ++i) {
-        this->board.set_cell(HEIGHT - 2, i, EMPTY);
+        this->board.set_cell(HEIGHT + PLAYER_POS_Y_OFFSET, i, EMPTY);
     }
 
-    this->board.set_cell(HEIGHT - 2, pos - 1, PLAYER);
-    this->board.set_cell(HEIGHT - 2, pos, PLAYER);
-    this->board.set_cell(HEIGHT - 2, pos + 1, PLAYER);
+    this->board.set_cell(HEIGHT + PLAYER_POS_Y_OFFSET, pos - 1, PLAYER);
+    this->board.set_cell(HEIGHT + PLAYER_POS_Y_OFFSET, pos, PLAYER);
+    this->board.set_cell(HEIGHT + PLAYER_POS_Y_OFFSET, pos + 1, PLAYER);
 }
 
 void Player::update_last_dir() {

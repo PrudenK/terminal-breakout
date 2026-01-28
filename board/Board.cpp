@@ -46,9 +46,9 @@ void Board::init() {
         }
     }
 
-    board[HEIGHT - 2][WIDTH / 2 - 1] = PLAYER;
-    board[HEIGHT - 2][WIDTH / 2] = PLAYER;
-    board[HEIGHT - 2][WIDTH / 2 + 1] = PLAYER;
+    board[HEIGHT + PLAYER_POS_Y_OFFSET][WIDTH / 2 - 1] = PLAYER;
+    board[HEIGHT + PLAYER_POS_Y_OFFSET][WIDTH / 2] = PLAYER;
+    board[HEIGHT + PLAYER_POS_Y_OFFSET][WIDTH / 2 + 1] = PLAYER;
 }
 
 void Board::print() {

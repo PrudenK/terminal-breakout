@@ -94,13 +94,18 @@ void Ball::restart(Player& player, Board& board) {
     int lives = player.get_lives();
 
     if (lives == 0) {
-
+        player.set_game_over(true);
     }else{
-        x = HEIGHT - OFFSET_BALL_X_START;
-        y = WIDTH / 2;
-        dx = 1;
-        dy = 0;
-        board.set_cell(HEIGHT - OFFSET_BALL_X_START, WIDTH / 2, BALL);
-        restart_tick_counter = 30;
+        ball_reset(board);
     }
+}
+
+
+void Ball::ball_reset(Board& board) {
+    x = HEIGHT - OFFSET_BALL_X_START;
+    y = WIDTH / 2;
+    dx = 1;
+    dy = 0;
+    board.set_cell(HEIGHT - OFFSET_BALL_X_START, WIDTH / 2, BALL);
+    restart_tick_counter = 30;
 }

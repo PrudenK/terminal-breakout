@@ -20,6 +20,8 @@ public:
     void update(Player& player, Board& board);
 
     void restart(Player &player, Board &board);
+
+    void ball_reset(Board &board);
 };
 
 

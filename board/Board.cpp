@@ -71,11 +71,17 @@ void Board::print(Player& player) {
                 printf("   Score: ");
                 break;
             case 8:
-                std::string lives;
-                for (int k = 0; k < player.get_lives(); k++) {
-                    lives += "♥ ";
+                int player_lives = player.get_lives();
+                if (player_lives == 0) {
+                    std::cout << "   ¡Game over!";
+                }else {
+                    std::string lives;
+                    for (int k = 0; k < player_lives; k++) {
+                        lives += "♥ ";
+                    }
+                    std::cout << "   Lives: " << lives;
                 }
-                std::cout << "   Lives: " << lives;
+
                 break;
         }
 

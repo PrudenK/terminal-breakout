@@ -10,6 +10,8 @@
 #include <cstdio>
 #include <cstdlib>
 
+#include "../ball/Ball.h"
+#include "../board/Board.h"
 #include "../player/Player.h"
 #include "../utils/constants.h"
 
@@ -28,7 +30,7 @@ void restore_terminal() {
     tcsetattr(STDIN_FILENO, TCSANOW, &t);
 }
 
-int read_last_direction() {
+int read_last_direction(Player& player, Board& board, Ball& ball) {
     fd_set read_fds;
     timeval timeout{};
     int last_dir = 0;
@@ -55,6 +57,13 @@ int read_last_direction() {
         } else if (c == 'q') {
             restore_terminal();
             exit(0);
+        } else if (c == 'r') {
+            player.set_game_over(false);
+            player.set_lives(3);
+            player.restart_pos();
+
+            board.init();
+            ball.ball_reset(board);
         }
     }
 

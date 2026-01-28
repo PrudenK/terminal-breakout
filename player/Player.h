@@ -12,6 +12,7 @@ class Player {
     int last_dir;
     int tick_count;
     int lives;
+    bool game_over;
 
 public:
     Player(int pos);
@@ -24,11 +25,19 @@ public:
 
     int get_lives();
 
+    void set_lives(int l);
+
     void lost_live();
 
     int get_last_dir();
 
     int get_pos();
+
+    void restart_pos();
+
+    bool get_game_over();
+
+    void set_game_over(bool b);
 };
 
 

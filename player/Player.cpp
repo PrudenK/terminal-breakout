@@ -6,7 +6,7 @@
 #include "../utils/constants.h"
 #include "../board/Board.h"
 
-Player::Player(int pos): pos(pos), last_dir(0), tick_count(0), lives(3) {}
+Player::Player(int pos): pos(pos), last_dir(0), tick_count(0), lives(3), game_over(false) {}
 
 
 
@@ -46,6 +46,10 @@ int Player::get_lives() {
     return this->lives;
 }
 
+void Player::set_lives(int l) {
+    lives = l;
+}
+
 void Player::lost_live() {
     this->lives--;
 }
@@ -56,4 +60,16 @@ int Player::get_last_dir() {
 
 int Player::get_pos() {
     return pos;
+}
+
+void Player::restart_pos() {
+    pos = INITIAL_PLAYER_POS;
+}
+
+bool Player::get_game_over() {
+    return game_over;
+}
+
+void Player::set_game_over(bool b) {
+    game_over = b;
 }

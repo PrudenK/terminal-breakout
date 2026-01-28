@@ -72,5 +72,8 @@ CMakeFiles/terminal_breakout.dir/main.cpp.o: \
  /usr/include/c++/13/bits/ranges_base.h \
  /usr/include/c++/13/bits/max_size_type.h /usr/include/c++/13/numbers \
  /home/pruden/CLionProjects/terminal_breakout/keyboard/KeyboardManager.h \
+ /home/pruden/CLionProjects/terminal_breakout/keyboard/../ball/Ball.h \
+ /home/pruden/CLionProjects/terminal_breakout/keyboard/../board/Board.h \
+ /home/pruden/CLionProjects/terminal_breakout/keyboard/../player/Player.h \
  /home/pruden/CLionProjects/terminal_breakout/player/Player.h \
  /home/pruden/CLionProjects/terminal_breakout/utils/constants.h

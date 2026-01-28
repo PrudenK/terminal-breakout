@@ -14,13 +14,18 @@ int main() {
     Ball ball;
 
     while (true) {
-        int dir = read_last_direction();
-        if (dir != 0) {
-            player.move(dir, board);
+        if (!player.get_game_over()) {
+            int dir = read_last_direction(player, board, ball);
+            if (dir != 0) {
+                player.move(dir, board);
+            }
+            player.update_last_dir();
+            ball.update(player, board);
+            board.print(player);
+        }else {
+            read_last_direction(player, board, ball);
         }
-        player.update_last_dir();
-        ball.update(player, board);
-        board.print(player);
+
         usleep(60000);
     }
 }

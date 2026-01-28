@@ -13,6 +13,7 @@
 
 Board::Board(int width, int height): width(width), height(height), board(height, std::vector<int>(width)) {
     this->init();
+    set_cell(HEIGHT - OFFSET_BALL_X_START, WIDTH / 2, BALL);
 }
 
 void Board::set_cell(int x, int y, int value) {

@@ -8,7 +8,7 @@
 #include "../utils/constants.h"
 #include "../board/Board.h"
 
-Ball::Ball(): x(HEIGHT - OFFSET_BALL_X_START), y(WIDTH / 2), dx(1), dy(0), tick_counter(0), restart_tick_counter(0) {}
+Ball::Ball(): x(HEIGHT - OFFSET_BALL_X_START), y(WIDTH / 2), dx(1), dy(0), tick_counter(0), restart_tick_counter(30) {}
 
 
 void Ball::update(Player& player, Board& board) {

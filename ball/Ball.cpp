@@ -50,6 +50,8 @@ void Ball::update(Player& player, Board& board) {
             if (cellX == GREEN_BLOCK) board.set_cell(nextX, y, EMPTY);
             else board.set_cell(nextX, y, cellX - 1);
             dx *= -1;
+
+            player.update_score(get_score_by_cell(cellX));
         }
     }
 
@@ -69,6 +71,8 @@ void Ball::update(Player& player, Board& board) {
             if (cellY == GREEN_BLOCK) board.set_cell(x, nextY, EMPTY);
             else board.set_cell(x, nextY, cellY - 1);
             dy *= -1;
+
+            player.update_score(get_score_by_cell(cellY));
         }
     }
 
@@ -108,4 +112,15 @@ void Ball::ball_reset(Board& board) {
     dy = 0;
     board.set_cell(HEIGHT - OFFSET_BALL_X_START, WIDTH / 2, BALL);
     restart_tick_counter = 30;
+}
+
+int Ball::get_score_by_cell(int block) {
+    switch (block) {
+        case RED_BLOCK:    return RED_BLOCK_SCORE;
+        case ORANGE_BLOCK: return ORANGE_BLOCK_SCORE;
+        case YELLOW_BLOCK: return YELLOW_BLOCK_SCORE;
+        case BLUE_BLOCK:   return BLUE_BLOCK_SCORE;
+        case GREEN_BLOCK:  return GREEN_BLOCK_SCORE;
+        default:           return 0;
+    }
 }

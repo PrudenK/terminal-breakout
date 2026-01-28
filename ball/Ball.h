@@ -19,9 +19,12 @@ public:
     Ball();
     void update(Player& player, Board& board);
 
+    void ball_reset(Board &board);
+
+private:
     void restart(Player &player, Board &board);
 
-    void ball_reset(Board &board);
+    int get_score_by_cell(int block);
 };
 
 

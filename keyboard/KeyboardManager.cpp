@@ -61,10 +61,10 @@ int read_last_direction(Player& player, Board& board, Ball& ball) {
         } else if (c == 'q') {
             restore_terminal();
             exit(0);
-
         } else if (c == 'r') {
             player.set_game_over(false);
             player.set_lives(3);
+            player.set_score(0);
             player.restart_pos();
             board.init();
             ball.ball_reset(board);

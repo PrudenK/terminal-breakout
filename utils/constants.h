@@ -32,6 +32,14 @@ constexpr int YELLOW_BLOCK = 103;
 constexpr int BLUE_BLOCK = 102;
 constexpr int GREEN_BLOCK = 101;
 
+// Scores
+constexpr int RED_BLOCK_SCORE = 50;
+constexpr int ORANGE_BLOCK_SCORE = 40;
+constexpr int YELLOW_BLOCK_SCORE = 30;
+constexpr int BLUE_BLOCK_SCORE = 20;
+constexpr int GREEN_BLOCK_SCORE = 10;
+
+
 // BORDERS
 constexpr int BORDER_RANGE = 90;
 constexpr int BORDER_TOP = 91;

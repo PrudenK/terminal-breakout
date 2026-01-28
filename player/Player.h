@@ -13,6 +13,7 @@ class Player {
     int tick_count;
     int lives;
     bool game_over;
+    int score;
 
 public:
     Player(int pos);
@@ -38,6 +39,12 @@ public:
     bool get_game_over();
 
     void set_game_over(bool b);
+
+    void update_score(int u);
+
+    int get_score();
+
+    void set_score(int s);
 };
 
 

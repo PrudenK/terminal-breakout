@@ -6,7 +6,7 @@
 #include "../utils/constants.h"
 #include "../board/Board.h"
 
-Player::Player(int pos): pos(pos), last_dir(0), tick_count(0), lives(3), game_over(false) {}
+Player::Player(int pos): pos(pos), last_dir(0), tick_count(0), lives(3), game_over(false), score(0) {}
 
 
 
@@ -72,4 +72,16 @@ bool Player::get_game_over() {
 
 void Player::set_game_over(bool b) {
     game_over = b;
+}
+
+void Player::update_score(int u) {
+    score += u;
+}
+
+int Player::get_score() {
+    return score;
+}
+
+void Player::set_score(int s) {
+    score = s;
 }

@@ -69,7 +69,7 @@ void Board::print(Player& player) {
                 printf("   On Github: ");
                 break;
             case 6:
-                printf("   Score: ");
+                std::cout << "   Score: " << player.get_score();
                 break;
             case 8:
                 if (player.get_lives() == 0) {

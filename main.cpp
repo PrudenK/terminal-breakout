@@ -11,17 +11,17 @@ int main() {
 
     Board board(WIDTH, HEIGHT);
     board.init();
-    Player player(INITIAL_PLAYER_POS, board);
+    Player player(INITIAL_PLAYER_POS);
     Ball ball;
 
     while (true) {
         int dir = read_last_direction();
         if (dir != 0) {
-            player.move(dir);
+            player.move(dir, board);
         }
         player.update_last_dir();
         ball.update(player, board);
-        board.print();
+        board.print(player);
         usleep(60000);
     }
 }

@@ -8,6 +8,7 @@
 #include <iostream>
 
 #include "../utils/constants.h"
+#include "../player/Player.h"
 
 
 Board::Board(int width, int height): width(width), height(height), board(height, std::vector<int>(width)) {
@@ -51,13 +52,33 @@ void Board::init() {
     board[HEIGHT + PLAYER_POS_Y_OFFSET][WIDTH / 2 + 1] = PLAYER;
 }
 
-void Board::print() {
+void Board::print(Player& player) {
     printf("\033[H\033[J\n\n");
 
     for (int i = 0; i < HEIGHT; ++i) {
         for (int j = 0; j < WIDTH; ++j) {
             print_cell(board[i][j]);
         }
+
+        switch (i) {
+            case 3:
+                printf("   Developed by Pruden");
+                break;
+            case 4:
+                printf("   On Github: ");
+                break;
+            case 6:
+                printf("   Score: ");
+                break;
+            case 8:
+                std::string lives;
+                for (int k = 0; k < player.get_lives(); k++) {
+                    lives += "♥ ";
+                }
+                std::cout << "   Lives: " << lives;
+                break;
+        }
+
         printf("\n");
     }
 }

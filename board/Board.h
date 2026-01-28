@@ -5,6 +5,7 @@
 #ifndef TERMINAL_BREAKOUT_BOARD_H
 #define TERMINAL_BREAKOUT_BOARD_H
 #include <vector>
+class Player;
 
 
 class Board {
@@ -20,7 +21,7 @@ public: Board(int width, int height);
 
     void init();
 
-    void print();
+    void print(Player& player);
 
 private:
     void print_cell(int value) const;

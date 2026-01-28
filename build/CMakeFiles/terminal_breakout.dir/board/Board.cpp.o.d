@@ -161,4 +161,5 @@ CMakeFiles/terminal_breakout.dir/board/Board.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/pruden/CLionProjects/terminal_breakout/board/../utils/constants.h
+ /home/pruden/CLionProjects/terminal_breakout/board/../utils/constants.h \
+ /home/pruden/CLionProjects/terminal_breakout/board/../player/Player.h

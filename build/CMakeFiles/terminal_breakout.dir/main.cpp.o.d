@@ -21,7 +21,7 @@ CMakeFiles/terminal_breakout.dir/main.cpp.o: \
  /usr/include/linux/close_range.h \
  /home/pruden/CLionProjects/terminal_breakout/ball/Ball.h \
  /home/pruden/CLionProjects/terminal_breakout/ball/../player/Player.h \
- /home/pruden/CLionProjects/terminal_breakout/ball/../player/../board/Board.h \
+ /home/pruden/CLionProjects/terminal_breakout/board/Board.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -71,7 +71,6 @@ CMakeFiles/terminal_breakout.dir/main.cpp.o: \
  /usr/include/c++/13/bits/ranges_util.h \
  /usr/include/c++/13/bits/ranges_base.h \
  /usr/include/c++/13/bits/max_size_type.h /usr/include/c++/13/numbers \
- /home/pruden/CLionProjects/terminal_breakout/board/Board.h \
  /home/pruden/CLionProjects/terminal_breakout/keyboard/KeyboardManager.h \
  /home/pruden/CLionProjects/terminal_breakout/player/Player.h \
  /home/pruden/CLionProjects/terminal_breakout/utils/constants.h

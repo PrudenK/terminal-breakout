@@ -66,7 +66,7 @@ void Board::print(Player& player) {
                 printf("   Developed by Pruden");
                 break;
             case 4:
-                printf("   On Github: https://github.com/PrudenK/terminal_breakout");
+                printf("   On Github: https://github.com/PrudenK/terminal-breakout");
                 break;
             case 6:
                 std::cout << "   Score: " << player.get_score();

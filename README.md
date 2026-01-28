@@ -19,7 +19,7 @@ El juego está basado en un **grid discreto**, con lógica de colisiones por eje
 
 #### 1. 🔽 Clona el repositorio
 
-    git clone https://github.com/PrudenK/terminal_breakout.git
+    git clone https://github.com/PrudenK/terminal-breakout.git
 
 #### 2. 📂 Entra al directorio del proyecto
 

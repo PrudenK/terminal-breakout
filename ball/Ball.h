@@ -12,11 +12,14 @@ class Ball {
     int dx;
     int dy;
     int tick_counter;
+    int restart_tick_counter;
 
 
 public:
     Ball();
     void update(Player& player, Board& board);
+
+    void restart(Player &player, Board &board);
 };
 
 

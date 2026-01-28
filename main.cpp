@@ -10,7 +10,6 @@ int main() {
     set_terminal_without_buffer();
 
     Board board(WIDTH, HEIGHT);
-    board.init();
     Player player(INITIAL_PLAYER_POS);
     Ball ball;
 

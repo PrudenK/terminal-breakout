@@ -12,7 +12,7 @@
 
 
 Board::Board(int width, int height): width(width), height(height), board(height, std::vector<int>(width)) {
-
+    this->init();
 }
 
 void Board::set_cell(int x, int y, int value) {
